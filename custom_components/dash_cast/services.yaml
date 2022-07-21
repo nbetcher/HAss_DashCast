@@ -23,3 +23,9 @@ load_url:
       default: false
       selector:
         boolean:
+        
+    reload_seconds:
+      description: The number of seconds to which the cast page should reload.
+      default: 0
+      selector:
+        number:
