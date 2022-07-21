@@ -15,6 +15,7 @@ async def async_setup(hass, hass_config):
         entity_ids = call.data.get(ATTR_ENTITY_ID)
         url = call.data.get('url')
         force = call.data.get('force', False)
+        reload_seconds = call.data.get('reload_seconds', 0)
 
         for entity in hass.data[DATA_INSTANCES][MP_DOMAIN].entities:
             if entity.entity_id in entity_ids:
@@ -22,9 +23,9 @@ async def async_setup(hass, hass_config):
                 if not dash:
                     dashs[entity.entity_id] = dash = DashCastController()
                     entity._chromecast.register_handler(dash)
-                dash.load_url(url, force)
+                dash.load_url(url, force,)
 
-    hass.services.async_register(DOMAIN, 'load_url', play_media)
+    hass.services.async_register(DOMAIN, 'load_url', play_media, reload_seconds)
 
     return True
 
