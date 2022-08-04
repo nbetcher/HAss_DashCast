@@ -2,11 +2,11 @@
   "domain": "dash_cast",
   "name": "DashCast",
   "config_flow": true,
-  "documentation": "https://github.com/AlexxIT/DashCast",
-  "issue_tracker": "https://github.com/AlexxIT/DashCast/issues",
-  "codeowners": ["@AlexxIT"],
+  "documentation": "https://github.com/nbetcher/HAss_DashCast",
+  "issue_tracker": "https://github.com/nbetcher/HAss_DashCast/issues",
+  "codeowners": ["@nbetcher"],
   "dependencies": ["cast"],
   "requirements": [],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "iot_class": "calculated"
 }
