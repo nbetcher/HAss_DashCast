@@ -25,7 +25,7 @@ async def async_setup(hass, hass_config):
                     entity._chromecast.register_handler(dash)
                 dash.load_url(url, force,)
 
-    hass.services.async_register(DOMAIN, 'load_url', play_media, reload_seconds)
+    hass.services.async_register(DOMAIN, 'load_url', play_media, 570)
 
     return True
 
